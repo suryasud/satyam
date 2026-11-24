@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evening Notes · Satyam</title>
+<meta name="description" content="Evening Notes — quiet musings kept at the end of the day.">
+<meta name="theme-color" content="#FAF7F2" id="themeMeta">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='32' y='50' text-anchor='middle' font-size='50' fill='%23A05A1E'%3E%E0%A5%90%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/page.css">
+<script>
+  (function () {
+    document.documentElement.classList.add("js");
+    try { if (localStorage.getItem("satyam-theme") === "sandhya") document.documentElement.dataset.theme = "sandhya"; } catch (e) {}
+  })();
+</script>
+</head>
+<body style="--h:var(--rose);--hs:var(--rose-soft)">
+
+<div class="aura" aria-hidden="true"></div>
+<canvas id="motes" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<header class="nav" id="siteNav">
+  <div class="nav-inner">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark"><svg class="ic"><use href="#i-chakra"/></svg></span>
+      <span class="brand-text"><span class="brand-name">Satyam</span><span class="brand-sub">A Personal Study</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a class="nav-link" href="../../index.html">Home</a>
+      <a class="nav-link active" href="../../index.html#library">Library</a>
+      <a class="nav-link" href="../../index.html#about">About</a>
+    </nav>
+    <div class="nav-controls">
+      <button class="sound-btn" id="soundBtn" aria-pressed="true" aria-label="Mute sound">
+        <span class="dot" aria-hidden="true"></span>
+        <svg class="ic sm"><use id="soundIcon" href="#i-bell"/></svg><span id="soundLabel">Sound on</span>
+      </button>
+      <button class="theme-btn" id="themeBtn" aria-label="Switch to Sandhya evening mode">
+        <svg class="ic sm"><use id="themeIcon" href="#i-moon"/></svg><span id="themeLabel">Sandhya</span>
+      </button>
+      <a class="gh-btn" data-repo href="https://github.com/"><svg class="ic sm"><use href="#i-github"/></svg><span>GitHub</span></a>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <svg class="ic"><use id="menuIcon" href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="nav-link" href="../../index.html">Home</a>
+    <a class="nav-link" href="../../index.html#library">Library</a>
+    <a class="nav-link" href="../../index.html#about">About</a>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <span class="page-om" aria-hidden="true">ॐ</span>
+    <div class="wrap">
+      <a class="back-link" href="../../index.html#library"><svg class="ic xs"><use href="#i-arrow"/></svg> Back to the library</a>
+      <p class="page-eyebrow"><span class="om">ॐ</span> Journal</p>
+      <h1 class="page-title">Evening Notes</h1>
+      <p class="page-dev" lang="sa">सन्ध्या</p>
+      <p class="page-lede">Quiet musings, kept at the end of the day — small things noticed on ordinary afternoons.</p>
+      <div class="page-rule" aria-hidden="true"><svg class="ic sm"><use href="#i-diya"/></svg><span></span></div>
+    </div>
+  </section>
+
+  <section class="page-body">
+    <div class="wrap quiet">
+      <span class="quiet-mark"><svg class="ic"><use href="#i-diya"/></svg></span>
+      <p class="quiet-line">Pages for this study will appear here as they are written.</p>
+      <a class="btn ghost sm" href="../../index.html#library"><svg class="ic sm"><use href="#i-arrow"/></svg> Back to the library</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark"><svg class="ic"><use href="#i-chakra"/></svg></span>
+      <div><p class="footer-name">Satyam</p><p class="footer-tag">A personal study.</p></div>
+    </div>
+    <p class="footer-mantra" lang="sa">॥ सत्यमेव जयते ॥</p>
+    <p class="footer-copy">Kept humbly, corrected freely.</p>
+  </div>
+</footer>
+
+<script src="../../assets/js/core.js"></script>
+</body>
+</html>

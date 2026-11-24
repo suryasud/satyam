@@ -1,0 +1,57 @@
+/* ══════════════════════════════════════════════════════════════
+   assets/css/page.css  ·  shared layout for every study page
+   Each page sets --h / --hs for its own accent.
+   ══════════════════════════════════════════════════════════════ */
+
+.page-hero{position:relative;padding:148px 0 3.2rem;overflow:hidden}
+.page-om{
+  position:absolute;right:-4vw;top:52%;transform:translateY(-50%);
+  font-family:var(--font-dev);font-size:min(42vw,460px);line-height:1;
+  color:var(--om-ink);pointer-events:none;user-select:none;z-index:0;
+}
+.page-hero .wrap{position:relative;z-index:1}
+
+.back-link{
+  display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;font-weight:600;color:var(--ink2);
+  border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.42rem .95rem;
+  transition:all .3s var(--ease);margin-bottom:1.8rem;
+}
+.back-link .ic{transform:rotate(180deg);transition:transform .3s var(--ease)}
+.back-link:hover{color:var(--h);border-color:var(--h);transform:translateY(-2px)}
+.back-link:hover .ic{transform:rotate(180deg) translateX(3px)}
+
+.page-eyebrow{
+  display:flex;align-items:center;gap:.7rem;font-size:.7rem;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--sage);
+}
+.page-eyebrow .om{font-family:var(--font-dev);font-size:1.05rem;color:var(--h);letter-spacing:0}
+.page-eyebrow::after{content:"";height:1px;width:60px;background:linear-gradient(90deg,var(--h),transparent)}
+
+.page-title{
+  font-family:var(--font-display);font-weight:400;font-size:clamp(2.6rem,6vw,4rem);
+  line-height:1.12;letter-spacing:-.015em;margin:.7rem 0 .2rem;
+}
+.page-dev{font-family:var(--font-dev);font-size:clamp(1.15rem,2.6vw,1.5rem);color:var(--h);line-height:1.9}
+.page-lede{color:var(--ink2);font-size:1.04rem;font-weight:300;max-width:56ch;margin-top:1rem}
+.page-rule{display:flex;align-items:center;gap:.8rem;margin-top:1.8rem;color:var(--h);opacity:.85}
+.page-rule span{height:1px;flex:1;max-width:180px;background:linear-gradient(90deg,var(--line2),transparent)}
+.page-rule svg{width:17px;height:17px}
+
+.page-body{padding:1rem 0 5rem}
+.quiet{text-align:center;padding:3.5rem 0 1rem;display:flex;flex-direction:column;align-items:center;gap:1.2rem}
+.quiet-mark{
+  width:56px;height:56px;border-radius:18px;display:grid;place-items:center;
+  background:var(--hs);color:var(--h);border:1px solid var(--line);
+}
+.quiet-mark svg{width:24px;height:24px}
+.quiet-line{font-family:var(--font-display);font-style:italic;font-size:1.3rem;color:var(--ink2);line-height:1.6;max-width:44ch}
+.quiet .btn.ghost:hover{border-color:var(--h);color:var(--h)}
+.quiet .btn .ic{transform:rotate(180deg)}
+
+.page-content{max-width:760px}
+
+@media (max-width:640px){
+  .page-hero{padding:118px 0 2.4rem}
+  .page-om{opacity:.7;right:-14vw}
+  .quiet-line{font-size:1.15rem}
+}
