@@ -12,6 +12,67 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/base.css">
 <link rel="stylesheet" href="../../assets/css/page.css">
+<style>
+  /* ── Evening Notes Grid ── */
+  .notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .note-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    transition: all 0.4s var(--ease);
+    text-decoration: none;
+    color: inherit;
+  }
+  .note-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--rose);
+    box-shadow: var(--shadow-sm);
+  }
+  .note-date {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink3);
+  }
+  .note-title {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.65rem;
+    line-height: 1.3;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+  }
+  .note-card:hover .note-title { color: var(--rose); }
+  .note-excerpt {
+    font-size: 0.95rem;
+    color: var(--ink2);
+    line-height: 1.7;
+    font-weight: 300;
+    flex: 1;
+  }
+  .note-read {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--rose);
+    margin-top: 1rem;
+    transition: gap 0.3s var(--ease);
+  }
+  .note-card:hover .note-read { gap: 0.7rem; }
+</style>
 <script>
   (function () {
     document.documentElement.classList.add("js");
@@ -72,10 +133,24 @@
   </section>
 
   <section class="page-body">
-    <div class="wrap quiet">
-      <span class="quiet-mark"><svg class="ic"><use href="#i-diya"/></svg></span>
-      <p class="quiet-line">Pages for this study will appear here as they are written.</p>
-      <a class="btn ghost sm" href="../../index.html#library"><svg class="ic sm"><use href="#i-arrow"/></svg> Back to the library</a>
+    <div class="wrap">
+      <div class="notes-grid">
+        
+        <a href="destiny.html" class="note-card">
+          <span class="note-date">November 2026</span>
+          <h2 class="note-title">Destiny</h2>
+          <p class="note-excerpt">Thoughts on what is written, what is chosen, and the quiet space in between where we actually live.</p>
+          <span class="note-read">Read note <svg class="ic sm"><use href="#i-arrow"/></svg></span>
+        </a>
+
+        <a href="whoDecidesTheRules.html" class="note-card">
+          <span class="note-date">November 2026</span>
+          <h2 class="note-title">Who decides the rules?</h2>
+          <p class="note-excerpt">A quiet evening musing on dharma, nature, and the architecture of right and wrong.</p>
+          <span class="note-read">Read note <svg class="ic sm"><use href="#i-arrow"/></svg></span>
+        </a>
+
+      </div>
     </div>
   </section>
 </main>
